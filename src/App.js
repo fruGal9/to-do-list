@@ -47,9 +47,9 @@ function App() {
   }
   return (
 
-    <div className="App text-center bg-green-300 h-screen" >
+    <div className="App text-center bg-green-400 h-screen" >
       <header>
-        <h1 className='text-3xl font-bold p-10'>Marius's Todo list</h1>
+        <h1 className='text-3xl font-bold p-10 font-mono'>Marius's Todo list</h1>
       </header>
       
       <Form
