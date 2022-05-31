@@ -47,10 +47,11 @@ function App() {
   }
   return (
 
-    <div className="App">
+    <div className="App text-center bg-green-300 h-screen" >
       <header>
-        <h1>Marius's Todo list</h1>
+        <h1 className='text-3xl font-bold p-10'>Marius's Todo list</h1>
       </header>
+      
       <Form
         inputText={inputText}
         todos={todos}
@@ -58,6 +59,7 @@ function App() {
         setInputText={setInputText}
         setStatus={setStatus}
       />
+      
       <TodoList
         filteredTodos={filteredTodos}
         todos={todos}
