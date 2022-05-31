@@ -47,7 +47,7 @@ function App() {
   }
   return (
 
-    <div className="App text-center bg-green-400 h-screen" >
+    <div className="App text-center bg-green-400 h-screen overflow-y-scroll" >
       <header>
         <h1 className='text-3xl font-bold p-10 font-mono'>Marius's Todo list</h1>
       </header>
