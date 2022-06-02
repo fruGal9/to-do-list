@@ -1,7 +1,8 @@
 import React from 'react';
 import Todo from './Todo';
+import SearchFilter from './SearchFilter'
 
-const TodoList = ({ todos, setTodos, filteredTodos }) => {
+const TodoList = ({todo, todos, setTodos, filteredTodos }) => {
 
     return (
         <div className="text-4xl flex items-stretch" >

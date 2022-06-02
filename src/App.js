@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react'
 import './App.css';
 import Form from './Components/Form'
 import TodoList from './Components/TodoList';
+import SearchFilter from './Components/SearchFilter';
+
 function App() {
+
   //State
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
+
+  // const[search, setSearch] = useState('');
+
   //Run once when app starts
   useEffect(() => {
     getLocalTodos();
@@ -58,12 +64,21 @@ function App() {
         setTodos={setTodos}
         setInputText={setInputText}
         setStatus={setStatus}
+
+        
       />
-      
+      <SearchFilter
+      placeholder='Search ToDo'
+      data={todos}
+      />
       <TodoList
         filteredTodos={filteredTodos}
         todos={todos}
-        setTodos={setTodos} />
+        setTodos={setTodos} 
+        // search={search}
+        // setSearch={setSearch}
+        />
+        
     </div>
   );
 }

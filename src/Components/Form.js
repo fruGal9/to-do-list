@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoList from './TodoList';
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     // below is a function that updates the input text state
@@ -22,7 +23,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     };
 
     return (
-        <form>
+        <form className=''>
             <input value={inputText} onChange={inputTextHandler} type="text" className="m-10 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900" />
             <button onClick={submitTodoHandler} className="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded" type="submit">
                 <i className="fas fa-plus-square "></i>
