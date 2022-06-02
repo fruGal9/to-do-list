@@ -18,7 +18,7 @@ const SearchFilter = ({ placeholder, data }) => {
     }
 
     return (
-        <div className='search'  >
+        <div className='search inline-flex flex-col'  >
 
             <div className='searchInputs'>
                 <input type='text' placeholder={placeholder}
@@ -26,8 +26,8 @@ const SearchFilter = ({ placeholder, data }) => {
                     className="m-10 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900 " />
             </div>
             {filteredData.length != 0 && (
-                <div className='dataResult bg-white mt-1.5 shadow-sm overflow-hidden overflow-y-auto w-80 h-52 '>
-                    {filteredData.map((value, key) => {
+                <div className='dataResult bg-white mt-1.5 shadow-sm overflow-hidden overflow-y-auto w-80 h-52'>
+                    {filteredData.map((value) => {
                         return <p>{value.text}</p>
                     }
 
