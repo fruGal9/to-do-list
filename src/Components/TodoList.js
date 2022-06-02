@@ -5,8 +5,8 @@ import SearchFilter from './SearchFilter'
 const TodoList = ({todo, todos, setTodos, filteredTodos }) => {
 
     return (
-        <div className="text-4xl flex items-stretch" >
-            <ul className="flex-1">
+        <div className="text-4xl " >
+            <ul className="">
                 {filteredTodos.map(todo => (
                     <Todo todos={todos}
                         setTodos={setTodos}

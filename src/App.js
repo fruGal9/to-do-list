@@ -53,19 +53,17 @@ function App() {
   }
   return (
 
-    <div className="App text-center bg-green-400 h-screen overflow-y-scroll" >
+    <div className="App text-center bg-green-400 h-screen overflow-y-scroll  " >
       <header>
         <h1 className='text-3xl font-bold p-10 font-mono'>Marius's Todo list</h1>
       </header>
-      
+      <div className='flex-col '>
       <Form
         inputText={inputText}
         todos={todos}
         setTodos={setTodos}
         setInputText={setInputText}
         setStatus={setStatus}
-
-        
       />
       <SearchFilter
       placeholder='Search ToDo'
@@ -75,10 +73,8 @@ function App() {
         filteredTodos={filteredTodos}
         todos={todos}
         setTodos={setTodos} 
-        // search={search}
-        // setSearch={setSearch}
         />
-        
+        </div>
     </div>
   );
 }

@@ -18,17 +18,17 @@ const SearchFilter = ({ placeholder, data }) => {
     }
 
     return (
-        <div className='search flex justify-center flex-col m-15 '  >
+        <div className='search'  >
 
             <div className='searchInputs'>
                 <input type='text' placeholder={placeholder}
                     onChange={handleFilter}
-                    className="m-10 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900 self-center" />
+                    className="m-10 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900 " />
             </div>
             {filteredData.length != 0 && (
-                <div className='dataResult bg-white self-center px-4 py-4 '>
+                <div className='dataResult bg-white mt-1.5 shadow-sm overflow-hidden overflow-y-auto w-80 h-52 '>
                     {filteredData.map((value, key) => {
-                        return <div>{value.text}</div>
+                        return <p>{value.text}</p>
                     }
 
                     )}
