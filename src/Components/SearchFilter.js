@@ -30,7 +30,7 @@ const SearchFilter = ({ placeholder, data }) => {
                             return (
                                 // <a href={value.link} target='_self'>
                                     <p>{value.text}</p>
-                                // </a>
+                                // </a>k
                             )
                         }
                         )}
