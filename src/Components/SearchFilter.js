@@ -18,24 +18,27 @@ const SearchFilter = ({ placeholder, data }) => {
     }
 
     return (
-        <div className='search inline-flex flex-col'  >
+        <div className='flex justify-center mt-2'>
 
-            <div className='searchInputs'>
+            <div className='flex-col bg-white'>
                 <input type='text' placeholder={placeholder}
-                    onChange={handleFilter}
-                    className="m-1 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900 " />
-            </div>
-            <div className='border-2'>
-            {filteredData.length != 0 && (
-                <div className='dataResult bg-white mt-1 shadow-sm overflow-hidden overflow-y-auto placeholder-inherit h-52'>
-                    {filteredData.map((value) => {
-                        return <p>{value.text}</p>
-                    }
+                    onChange={handleFilter} />
 
-                    )}
-                </div>
-            )}
+                {filteredData.length != 0 && (
+                    <div className='text-center border-blue-600 border-solid border-x-2 border-y-2  max-h-60 overflow-y-scroll scrollbar-hide'>
+                        {filteredData.map((value) => {
+                            return (
+                                // <a href={value.link} target='_self'>
+                                    <p>{value.text}</p>
+                                // </a>
+                            )
+                        }
+                        )}
+                    </div>
+
+                )}
             </div>
+
 
         </div>
     )

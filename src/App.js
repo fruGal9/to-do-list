@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './App.css';
 import Form from './Components/Form'
 import TodoList from './Components/TodoList';
 import SearchFilter from './Components/SearchFilter';
@@ -12,7 +11,7 @@ function App() {
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  // const[search, setSearch] = useState('');
+  
 
   //Run once when app starts
   useEffect(() => {
@@ -53,11 +52,11 @@ function App() {
   }
   return (
 
-    <div className="App text-center bg-green-400 h-screen overflow-y-scroll flex flex-col  " >
+    <div className='bg-indigo-100 overflow-y-scroll h-screen' >
       <header>
-        <h1 className='text-3xl font-bold p-10 font-mono'>Marius's Todo list</h1>
+        <h1 className='bg-purple-600 text-white text-center max-w-2xl font-mono font-5xl shadow-xl font-medium m-auto mt-5 mb-5 p-5 rounded-lg' >Marius's Todo list</h1>
       </header>
-      <div className='flex-col '>
+      <div className='block'>
       <Form
         inputText={inputText}
         todos={todos}

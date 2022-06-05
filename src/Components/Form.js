@@ -21,19 +21,21 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     const statusHandler = (e) => {
         setStatus(e.target.value);
     };
+    
 
     return (
-        <form className=''>
-            <input value={inputText} onChange={inputTextHandler} type="text" className="m-10 border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900" />
-            <button onClick={submitTodoHandler} className="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded" type="submit">
-                <i className="fas fa-plus-square "></i>
-            </button>
-            <div className="select ">
-                <select onChange={statusHandler} name="todos" className="border-green-700 hover:border-green-500 focus:border-green-900 focus:ring-green-900">
+        <form className='flex justify-center '>
+            <div className='space-x-5' >
+            <input value={inputText} onChange={inputTextHandler} type="text" />
+            
+                <select onChange={statusHandler} name="todos">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
                 </select>
+                <button onClick={submitTodoHandler} className="bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-3 border-b-4 border-green-700 rounded-xl" type="submit">
+                <i className="fas fa-plus-square "></i>
+            </button>
             </div>
         </form>
     );
