@@ -16,7 +16,7 @@ function App() {
   //Run once when app starts
   useEffect(() => {
     getLocalTodos();
-  }, [])
+  }, []);
   //Use effect
   useEffect(() => {
     filterHandler();
@@ -38,18 +38,18 @@ function App() {
   };
   //Save to local
   const saveLocalTodos = () => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  };
-
-  const getLocalTodos = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
-
-    };
+    if(todos.length > 0){
+    localStorage.setItem("todos", JSON.stringify(todos));
   }
+  };
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem("todos")); 
+      setTodos(todoLocal);
+    }
+  };
   return (
 
     <div className='bg-indigo-100 overflow-y-scroll h-screen' >
