@@ -1,6 +1,7 @@
 # See online
 https://intense-bastion-58995.herokuapp.com/
-![alt text](https://github.com/fruGal9/to-do-list/blob/main/public/screenshot.jpg?raw=true)
+
+![Main Page](https://github.com/fruGal9/to-do-list/blob/main/public/screenshot.JPG?raw=true)
 
 
 # Getting Started with Create React App
