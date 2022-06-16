@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-
+// Function that filters existing to do's by name when text is input in the search field
 const SearchFilter = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
 
@@ -19,27 +18,20 @@ const SearchFilter = ({ placeholder, data }) => {
 
     return (
         <div className='flex justify-center mt-2'>
-
             <div className='flex-col bg-white'>
                 <input type='text' placeholder={placeholder}
                     onChange={handleFilter} />
-
                 {filteredData.length != 0 && (
                     <div className='text-center border-blue-600 border-solid border-x-2 border-y-2  max-h-60 overflow-y-scroll scrollbar-hide'>
                         {filteredData.map((value) => {
                             return (
-                                // <a href={value.link} target='_self'>
-                                    <p>{value.text}</p>
-                                // </a>k
+                                <p>{value.text}</p>
                             )
                         }
                         )}
                     </div>
-
                 )}
             </div>
-
-
         </div>
     )
 }

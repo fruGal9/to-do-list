@@ -1,9 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
-import SearchFilter from './SearchFilter'
-
-const TodoList = ({todo, todos, setTodos, filteredTodos }) => {
-
+// List of to do's that renders Todo component
+const TodoList = ({todos, setTodos, filteredTodos }) => {
     return (
         <div>
             <ul>

@@ -5,24 +5,21 @@ import SearchFilter from './Components/SearchFilter';
 
 function App() {
 
-  //State
+  //App state
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
-
-  
-
-  //Run once when app starts
+  //Run once when app starts to get the to do's saved on local storage
   useEffect(() => {
     getLocalTodos();
   }, []);
-  //Use effect
+  //Use effect that filters and saves to do's on local storage
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
-  //functions
+  //Filters completed to'dos from uncompleted to do's
   const filterHandler = () => {
     switch (status) {
       case 'completed':
@@ -36,17 +33,18 @@ function App() {
         break;
     }
   };
-  //Save to local
+  //Save to local logic
   const saveLocalTodos = () => {
-    if(todos.length > 0){
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }
+    if (todos.length > 0) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
   };
+  //Retrieves to do's previously saved on local storage
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
     } else {
-      let todoLocal = JSON.parse(localStorage.getItem("todos")); 
+      let todoLocal = JSON.parse(localStorage.getItem("todos"));
       setTodos(todoLocal);
     }
   };
@@ -57,23 +55,23 @@ function App() {
         <h1 className='bg-purple-600 text-white text-center max-w-2xl font-mono font-5xl shadow-xl font-medium m-auto mt-5 mb-5 p-5 rounded-lg' >Marius's Todo list</h1>
       </header>
       <div className='block'>
-      <Form
-        inputText={inputText}
-        todos={todos}
-        setTodos={setTodos}
-        setInputText={setInputText}
-        setStatus={setStatus}
-      />
-      <SearchFilter
-      placeholder='Search ToDo'
-      data={todos}
-      />
-      <TodoList
-        filteredTodos={filteredTodos}
-        todos={todos}
-        setTodos={setTodos} 
+        <Form
+          inputText={inputText}
+          todos={todos}
+          setTodos={setTodos}
+          setInputText={setInputText}
+          setStatus={setStatus}
         />
-        </div>
+        <SearchFilter
+          placeholder='Search ToDo'
+          data={todos}
+        />
+        <TodoList
+          filteredTodos={filteredTodos}
+          todos={todos}
+          setTodos={setTodos}
+        />
+      </div>
     </div>
   );
 }

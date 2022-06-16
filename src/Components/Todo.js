@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Todo = ({ text, todo, todos, setTodos }) => {
-    // Events
+    // Events for deleting to do's and adding to do's to completed list
     const deleteHandler = () => {
         setTodos(todos.filter(el => el.id !== todo.id));
     };
@@ -13,11 +13,11 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 }
             }
             return item;
-            
+
         }))
         completedAlert();
     }
-
+    // Pop-up alert that signals the task completion
     const completedAlert = () => {
         alert('Task complete!')
     }
