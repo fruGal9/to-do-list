@@ -7,6 +7,8 @@ Completed codecademy front-end development path:
 
 [Codecademy Certificate](https://github.com/fruGal9/to-do-list/blob/main/public/MariusC_certificate_Codecademy.pdf)
 
+[Brainnest_certificate](https://github.com/fruGal9/to-do-list/blob/main/public/Marius_Ciobanu.pdf)
+
 [LinkedIn](https://www.linkedin.com/in/marius-ciobanu-359478160/)
 
 [CV](https://github.com/fruGal9/to-do-list/blob/main/public/CV_Marius_Ciobanu_en.pdf)
