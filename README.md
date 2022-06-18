@@ -5,7 +5,7 @@ Completed codecademy front-end development path:
 - React
 - Redux
 
-[Codecademy Certificate](https://github.com/fruGal9/to-do-list/blob/main/public/MariusC_certificate_Codecademy.pdf)
+[Codecademy Certificate](https://github.com/fruGal9/to-do-list/blob/main/public/public/CiobanuMarius_codecademy.pdf)
 
 [Brainnest_certificate](https://github.com/fruGal9/to-do-list/blob/main/public/Marius_Ciobanu.pdf)
 
